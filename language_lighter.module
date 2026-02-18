@@ -127,7 +127,6 @@ function content_translation_form_language_lighter_form_alter(array &$form, Form
     \Drupal::moduleHandler()->loadInclude('content_translation', 'inc', 'content_translation.admin');
     _content_translation_form_language_content_settings_form_alter($form, $form_state);
     
-    // dump($form);
     $entityId = Element::children($form["settings"])[0];
     foreach (Element::children($form["settings"][$entityId]) as $bundle) {
       if ($bundle != $route_bundle) {
